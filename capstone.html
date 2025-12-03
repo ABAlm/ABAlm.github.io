@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone – NASA JPL Mars Hard Lander</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    >
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">My Website</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="capstone.html">Capstone</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mt-5 pt-5">
+
+        <!-- HERO / OVERVIEW -->
+        <section class="py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="mb-3">NASA JPL Mars Hard Lander – Electrical System</h1>
+                    <h5 class="text-muted mb-3">Capstone Project – Power & PCB Subsystem</h5>
+                    <p>
+                        This capstone project, sponsored by NASA’s Jet Propulsion Laboratory (JPL),
+                        focuses on designing a Mars hard lander electrical system that can be deployed on
+                        the Martian surface to collect environmental data. The system must withstand high-G impact, operate
+                        autonomously for multiple sols, and reliably collect and transmit
+                        environmental data.
+                    </p>
+                    <p>
+                        My primary responsibilities are centered on the electrical system:
+                        designing the power subsystem, building the Li-ion battery pack with BMS
+                        protection, and creating the PCB for the antenna/RF circuit.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a href="PDR Slides.pdf" class="btn btn-primary btn-sm" target="_blank">
+                            <i class="fa-solid fa-file-pdf me-2"></i>View PDR Slides
+                        </a>
+                        <a href="abdulrahmanresume2025.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                            <i class="fa-solid fa-file-lines me-2"></i>Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-4 mt-lg-0">
+                    <!-- Show the poster PDF embedded -->
+                    <embed src="Week 13_ Poster.pdf"
+                           type="application/pdf"
+                           class="w-100 rounded shadow-sm"
+                           style="height: 400px;"
+                           alt="Capstone overview image">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- SYSTEM ARCHITECTURE -->
+        <section class="py-4">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="h4 mb-3">System Architecture</h2>
+                    <p>
+                        The Mars hard-lander node combines sensing, processing, power management,
+                        and RF communication into a compact, impact-survivable electrical system. The high-level
+                        architecture includes:
+                    </p>
+                    <ul>
+                        <li>STM32-based processing and control</li>
+                        <li>Environmental and seismic sensors</li>
+                        <li>Custom 3S3P Li-ion power subsystem with BMS</li>
+                        <li>Multi-rail power conversion (12 V, 5 V, 3.3 V)</li>
+                        <li>Antenna and RF front-end PCB for communication</li>
+                    </ul>
+                    <p class="mb-0">
+                        The electrical system must support mission requirements such as multi-sol
+                        operation, thermal constraints, and limited available energy while maintaining
+                        system reliability.
+                    </p>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="Functional_Diagram.jpeg" class="img-fluid rounded shadow-sm" alt="System block diagram">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- MY ROLE -->
+        <section class="py-4">
+            <h2 class="h4 mb-3">My Role & Responsibilities</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Power Subsystem Lead</h5>
+                            <p class="card-text mb-1">
+                                Designed the 3S3P Li-ion battery configuration and integrated a BMS to
+                                manage protection, balancing, and safe charge/discharge behavior.
+                            </p>
+                            <p class="card-text mb-0">
+                                Developed and refined the power budget to support multi-sol operation.
+                                Created the AX5043 antenna/RF PCB design and schematic using Altium Designer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">PCB Designer</h5>
+                            <p class="card-text mb-1">
+                                Created the PCB layout for the antenna/RF front-end and contributed to
+                                power distribution and decoupling strategies using Altium Designer.
+                            </p>
+                            <p class="card-text mb-0">
+                                Ensured proper routing, grounding, and interfaces to the STM32 and RF
+                                components.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Power Conversion & Budgeting</h5>
+                            <p class="card-text mb-1">
+                                Selected and analyzed buck converters to derive 5 V and 3.3 V rails
+                                from a 12 V battery bus.
+                            </p>
+                            <p class="card-text mb-0">
+                                Modeled current draw and duty cycles across operating modes to verify
+                                that the system meets energy and thermal constraints.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- POWER SUBSYSTEM -->
+        <section class="py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="h4 mb-3">3S3P Li-ion Battery & BMS</h2>
+                    <p>
+                        The power subsystem is built around a 3S3P Li-ion battery pack designed to
+                        provide sufficient energy for multiple sols under expected load conditions.
+                        Cells are configured in three series groups, each with three cells in parallel,
+                        to balance capacity, voltage, and physical constraints.
+                    </p>
+                    <ul>
+                        <li>Assembled and welded the 3S3P pack from individual cells.</li>
+                        <li>Integrated a BMS to handle over-voltage, under-voltage, over-current, and cell balancing.</li>
+                        <li>Designed connections for safe charging, discharging, and measurement.</li>
+                        <li>Verified pack behavior under expected load currents and duty cycles.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="Battery_Pack_Setup.jpeg" class="img-fluid rounded shadow-sm" alt="3S3P battery pack with BMS">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ANTENNA / RF PCB -->
+        <section class="py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <h2 class="h4 mb-3">Antenna & RF PCB Design</h2>
+                    <p>
+                        I designed the antenna/RF PCB that interfaces the transceiver to the external
+                        antenna and supports proper impedance matching and signal integrity. The layout
+                        incorporates ground planes, careful trace routing, and appropriate decoupling.
+                    </p>
+                    <ul>
+                        <li>Schematic capture and symbol/footprint management in Altium Designer.</li>
+                        <li>Placement and routing of RF components, matching network, and connectors.</li>
+                        <li>Used ground pours, vias, and controlled trace paths to minimize noise.</li>
+                        <li>Designed to integrate cleanly with the STM32-based main board.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
+                    <img src="Antenna_PCB.jpeg" class="img-fluid rounded shadow-sm" alt="Antenna PCB layout">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- POWER BUDGET & TESTING -->
+        <section class="py-4">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="h4 mb-3">Power Budget & Multi-Sol Operation</h2>
+                    <p>
+                        Using estimated and measured current draw from each subsystem, I helped
+                        construct the power budget to verify that the node can operate for the
+                        required number of sols. This included:
+                    </p>
+                    <ul>
+                        <li>Modeling average and peak current for sensors, MCU, RF, and housekeeping loads.</li>
+                        <li>Estimating duty cycles for each mode (sleep, sense, transmit, etc.).</li>
+                        <li>Checking capacity vs. consumption curves against the 3S3P configuration.</li>
+                        <li>Identifying high-risk scenarios where load or temperature could threaten runtime.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <h2 class="h4 mb-3">Testing & Validation</h2>
+                    <p>
+                        I contributed to early proof-of-concept testing for the power and PCB subsystems
+                        to reduce risk going into later phases of the project:
+                    </p>
+                    <ul>
+                        <li>Battery discharge tests using INA219 current and voltage logging.</li>
+                        <li>Verification of BMS cutoff thresholds and recovery behavior.</li>
+                        
+                    </ul>
+                    <!-- Show PoC printout PDF embedded -->
+                    <embed src="PoC_Printout.pdf"
+                           type="application/pdf"
+                           class="w-100 rounded shadow-sm mt-3"
+                           style="height: 300px;"
+                           alt="Test and validation results">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- DOCUMENTS / ARTIFACTS -->
+        <section class="py-4">
+            <h2 class="h4 mb-3">Key Documents & Artifacts</h2>
+            <p>Selected capstone artifacts that document the design and verification process:</p>
+            <ul>
+                <li><a href="PDR Slides.pdf" target="_blank">Preliminary Design Review (PDR) Slides</a></li>
+                <li><a href="Capstone_TestPlan.pdf" target="_blank">Subsystem Test Plan</a></li>
+                <li><a href="Capstone_RiskRegister.pdf" target="_blank">Risk Register & Mitigation Plan</a></li>
+                <li><a href="Capstone_PowerSubsystem_Report.pdf" target="_blank">Power Subsystem Design Notes</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center bg-dark text-white py-3 mt-5">
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/abalmutairi/" class="text-info">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
