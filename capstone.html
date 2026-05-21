@@ -18,8 +18,9 @@
     >
 
     <style>
+
         body {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9eef5 100%);
         }
 
         section {
@@ -28,15 +29,18 @@
 
         .hero-title {
             font-weight: 700;
+            font-size: 3rem;
         }
 
         .card {
             border: none;
+            border-radius: 18px;
+            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-3px);
-            transition: 0.2s ease;
+            transform: translateY(-4px);
+            transition: 0.25s ease;
         }
 
         footer a {
@@ -47,7 +51,37 @@
             max-height: 520px;
             object-fit: contain;
             background-color: #fff;
+            border-radius: 16px;
         }
+
+        .section-title {
+            font-weight: 700;
+            color: #212529;
+        }
+
+        .hero-box {
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+        }
+
+        .architecture-card {
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        @media (max-width: 768px) {
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .project-img {
+                max-height: 350px;
+            }
+        }
+
     </style>
 </head>
 
@@ -55,551 +89,216 @@
 
     <!-- NAVBAR -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">Almutairi's</a>
 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+
+            <div class="container">
+
+                <!-- LOGO -->
+                <a class="navbar-brand d-flex align-items-center fw-bold"
+                   href="index.html">
+
+                    <img src="personallogo.png"
+                         alt="Abdulrahman Logo"
+                         width="48"
+                         height="48"
+                         class="rounded-circle shadow-sm me-2">
+
+                    <span>Almutairi's</span>
+
+                </a>
+
+                <!-- MOBILE BUTTON -->
                 <button
                     class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
 
+                <!-- NAV LINKS -->
                 <div class="collapse navbar-collapse" id="navbarNav">
 
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="hobbies.html">Hobbies</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="capstone.html">
-                                Capstone
+                            <a class="nav-link" href="index.html">
+                                Home
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="hobbies.html">
+                                Hobbies
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                               aria-current="page"
+                               href="capstone.html">
+
+                                Capstone
+
+                            </a>
+                        </li>
+
                     </ul>
 
+                    <!-- LINKEDIN -->
                     <ul class="navbar-nav ms-auto">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fa-solid fa-user"></i>
+
+                            <a class="nav-link"
+                               href="https://www.linkedin.com/in/abalmutairi/"
+                               target="_blank">
+
+                                <i class="fa-brands fa-linkedin fa-lg"></i>
+
                             </a>
+
                         </li>
+
                     </ul>
 
                 </div>
+
             </div>
+
         </nav>
+
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="container mt-5 pt-5">
+    <main class="container mt-5 pt-5 pb-5">
 
-        <!-- HERO / OVERVIEW -->
+        <!-- HERO -->
         <section class="py-5">
-            <div class="row align-items-center">
 
-                <div class="col-lg-7">
+            <div class="hero-box">
 
-                    <h1 class="hero-title mb-3">
-                        NASA JPL Mars Hard Lander – Avionics System
-                    </h1>
+                <div class="row align-items-center">
 
-                    <h5 class="text-muted mb-4">
-                        NASA JPL-Sponsored Senior Capstone Project
-                    </h5>
+                    <div class="col-lg-7">
 
-                    <p>
-                        This capstone project, sponsored by NASA’s Jet Propulsion Laboratory (JPL),
-                        focused on developing a Mars hard lander avionics system capable of surviving
-                        high-G impact conditions while autonomously collecting, storing, and transmitting
-                        environmental data from the Martian surface.
-                    </p>
+                        <h1 class="hero-title mb-3">
+                            NASA JPL Mars Hard Lander – Avionics System
+                        </h1>
 
-                    <p>
-                        My primary responsibilities focused on PCB development, power system testing,
-                        STM32H7 and STM32L4 firmware, and RTOS-based scheduling for communication
-                        and task coordination between the low-power controller and main processor.
-                    </p>
+                        <h5 class="text-muted mb-4">
+                            NASA JPL-Sponsored Senior Capstone Project
+                        </h5>
 
-                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <p class="fs-5">
+                            This capstone project, sponsored by NASA’s Jet Propulsion Laboratory (JPL),
+                            focused on developing a Mars hard lander avionics system capable of surviving
+                            high-G impact conditions while autonomously collecting, storing, and transmitting
+                            environmental data from the Martian surface.
+                        </p>
 
-                        <a href="Final Report ECEN4620.pdf"
-                           class="btn btn-primary btn-sm"
-                           target="_blank">
-                            <i class="fa-solid fa-book me-2"></i>
-                            Final Report
-                        </a>
+                        <p class="fs-5">
+                            My primary responsibilities focused on PCB development, power system testing,
+                            STM32H7 and STM32L4 firmware, and RTOS-based scheduling for communication
+                            and task coordination between the low-power controller and main processor.
+                        </p>
 
-                        <a href="EXPO Poster.pdf"
-                           class="btn btn-outline-primary btn-sm"
-                           target="_blank">
-                            <i class="fa-solid fa-image me-2"></i>
-                            EXPO Poster
-                        </a>
-
-                        <a href="Acceptance Test Slides-2.pdf"
-                           class="btn btn-outline-success btn-sm"
-                           target="_blank">
-                            <i class="fa-solid fa-check-circle me-2"></i>
-                            Acceptance Test
-                        </a>
-
-                        <a href="CDR Slides-2.pdf"
-                           class="btn btn-outline-info btn-sm"
-                           target="_blank">
-                            <i class="fa-solid fa-file-powerpoint me-2"></i>
-                            CDR Slides
-                        </a>
-
-                        <a href="PDR Slides.pdf"
-                           class="btn btn-outline-secondary btn-sm"
-                           target="_blank">
-                            <i class="fa-solid fa-file-pdf me-2"></i>
-                            PDR Slides
-                        </a>
-
-                        <a href="abdulrahmanresume2025.pdf"
-                           class="btn btn-outline-dark btn-sm"
-                           target="_blank">
-                            <i class="fa-solid fa-file-lines me-2"></i>
-                            Resume
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-5 mt-4 mt-lg-0">
-
-                    <embed src="EXPO Poster.pdf"
-                           type="application/pdf"
-                           class="w-100 rounded shadow-sm"
-                           style="height: 500px;"
-                           alt="Final EXPO Poster">
-
-                </div>
-
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- SYSTEM ARCHITECTURE -->
-<section class="py-4">
-
-    <h2 class="h4 mb-3">System Architecture</h2>
-
-    <p>
-        The Mars Hard Lander avionics system combines power management,
-        STM32-based processing, onboard sensing, storage, and communication
-        into a compact embedded system designed for autonomous operation.
-    </p>
-
-    <p>
-        The finalized architecture is shown through the hardware and software
-        system diagrams below.
-    </p>
-
-    <div class="row g-4 mt-3">
-
-        <div class="col-lg-6">
-            <div class="card shadow-sm h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Hardware Architecture</h5>
-                    <p class="card-text">
-                        Shows the power distribution path, 1S9P Li-ion battery system,
-                        voltage rails, STM32L4 low-power controller, STM32H7 main processor,
-                        sensors, payloads, and PlutoSDR connection.
-                    </p>
-
-                    <img src="HW Diagram.png"
-                         class="img-fluid rounded"
-                         alt="Mars Hard Lander hardware architecture diagram">
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-6">
-            <div class="card shadow-sm h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Software & Data Flow Architecture</h5>
-                    <p class="card-text">
-                        Shows how the STM32L4 low-power scheduler coordinates with the
-                        STM32H7 main processor to collect sensor data, store data,
-                        transmit packets through PlutoSDR, and manage system behavior.
-                    </p>
-
-                    <img src="SW Diagram.png"
-                         class="img-fluid rounded"
-                         alt="Mars Hard Lander software and data flow diagram">
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-        <hr>
-
-        <!-- MY ROLE -->
-        <section class="py-4">
-
-            <h2 class="h4 mb-4">My Role & Responsibilities</h2>
-
-            <div class="row g-3">
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">PCB Designer</h5>
-
-                            <p class="card-text">
-                                Worked on the final avionics PCB for the Mars Hard Lander system,
-                                including board integration, layout review, routing considerations,
-                                and hardware design verification.
-                            </p>
-
-                            <p class="card-text mb-0">
-                                Supported system-level integration between the PCB, sensors,
-                                power subsystem, and STM32-based control architecture.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">Power System Test Engineer</h5>
-
-                            <p class="card-text">
-                                Tested and validated the power subsystem, including the 1S9P Li-ion
-                                battery configuration, power distribution behavior, voltage regulation,
-                                and runtime performance.
-                            </p>
-
-                            <p class="card-text mb-0">
-                                Used current and voltage measurements to evaluate system stability
-                                under expected operating loads.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">STM32 Firmware & RTOS</h5>
-
-                            <p class="card-text">
-                                Worked on STM32H7 and STM32L4 firmware development and integration.
-                                The L4 acted as a low-power scheduler while the H7 handled higher-performance
-                                sensing, storage, and communication tasks.
-                            </p>
-
-                            <p class="card-text mb-0">
-                                Supported RTOS-based scheduling and task coordination between the L4 and H7.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <hr>
-
-        <!-- POWER SUBSYSTEM -->
-        <section class="py-4">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-6">
-
-                    <h2 class="h4 mb-3">1S9P Li-ion Battery & Power System Testing</h2>
-
-                    <p>
-                        The final power subsystem used a 1S9P Li-ion battery configuration designed
-                        to provide higher capacity while supporting the lander’s sensing, processing,
-                        storage, and communication tasks.
-                    </p>
-
-                    <ul>
-                        <li>Tested the 1S9P Li-ion battery configuration under expected system loads.</li>
-                        <li>Validated voltage regulation and power distribution behavior.</li>
-                        <li>Measured current and voltage to evaluate runtime and power stability.</li>
-                        <li>Supported system-level power testing and integration with the avionics board.</li>
-                    </ul>
-
-                </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-
-                    <img src="Battery_Pack_Setup.jpeg"
-                         class="img-fluid rounded shadow-sm project-img"
-                         alt="1S9P Li-ion battery power system">
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <hr>
-
-        <!-- FINAL PCB AND FIRMWARE -->
-        <section class="py-4">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-6 order-lg-2">
-
-                    <h2 class="h4 mb-3">Final PCB, STM32 Firmware & RTOS Integration</h2>
-
-                    <p>
-                        I worked on the final avionics PCB and STM32 firmware integration for the
-                        Mars Hard Lander system. The system used STM32H7 and STM32L4 microcontrollers,
-                        where the L4 coordinated scheduled tasks and the H7 handled higher-performance operations.
-                    </p>
-
-                    <ul>
-                        <li>Contributed to final PCB layout, board integration, and validation.</li>
-                        <li>Worked on STM32H7 and STM32L4 firmware development.</li>
-                        <li>Implemented L4-to-H7 task scheduling and communication logic.</li>
-                        <li>Worked with RTOS scheduling for sensing, storage, and transmission tasks.</li>
-                    </ul>
-
-                </div>
-
-                <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
-
-                    <img src="CapstonePCB.png"
-                         class="img-fluid rounded shadow-sm project-img"
-                         alt="Final Mars Hard Lander PCB">
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <hr>
-
-        <!-- TESTING -->
-        <section class="py-4">
-
-            <div class="row">
-
-                <div class="col-lg-6">
-
-                    <h2 class="h4 mb-3">Testing & Validation</h2>
-
-                    <p>
-                        I contributed to subsystem and system-level testing to reduce electrical,
-                        firmware, and integration risks before final project delivery.
-                    </p>
-
-                    <ul>
-                        <li>Power subsystem testing using current and voltage measurements.</li>
-                        <li>Battery runtime and power stability validation.</li>
-                        <li>STM32H7 and STM32L4 firmware integration testing.</li>
-                        <li>RTOS scheduling verification for coordinated system tasks.</li>
-                        <li>System-level validation through PoC, CDR, and acceptance testing.</li>
-                    </ul>
-
-                </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-
-                    <embed src="PoC Printout.pdf"
-                           type="application/pdf"
-                           class="w-100 rounded shadow-sm"
-                           style="height: 320px;"
-                           alt="Testing validation">
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <hr>
-
-        <!-- FINAL REPORT SECTION -->
-        <section class="py-4">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-5">
-
-                    <h2 class="h4 mb-3">Finalized Engineering Report</h2>
-
-                    <p>
-                        The finalized report documents the complete avionics system architecture,
-                        subsystem integration, firmware development, power system testing,
-                        and mission validation results for the NASA JPL-sponsored Mars Hard Lander project.
-                    </p>
-
-                    <ul>
-                        <li>Avionics system architecture and integration</li>
-                        <li>STM32H7 and STM32L4 firmware development</li>
-                        <li>RTOS scheduling and L4-to-H7 task coordination</li>
-                        <li>1S9P Li-ion power system testing</li>
-                        <li>Final PCB development and validation</li>
-                    </ul>
-
-                    <a href="Final Report ECEN4620.pdf"
-                       class="btn btn-primary mt-2"
-                       target="_blank">
-
-                        <i class="fa-solid fa-file-pdf me-2"></i>
-                        Open Final Report
-
-                    </a>
-
-                </div>
-
-                <div class="col-lg-7 mt-4 mt-lg-0">
-
-                    <embed src="Final Report ECEN4620.pdf"
-                           type="application/pdf"
-                           class="w-100 rounded shadow-sm"
-                           style="height: 520px;">
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <hr>
-
-        <!-- DOCUMENTS -->
-        <section class="py-4">
-
-            <h2 class="h4 mb-4">Final Deliverables & Artifacts</h2>
-
-            <div class="row g-3">
-
-                <div class="col-md-4 col-lg-2">
-
-                    <div class="card h-100 shadow-sm">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">Final Report</h5>
-
-                            <p class="card-text">
-                                Complete final engineering report documenting the system design and validation.
-                            </p>
+                        <div class="d-flex flex-wrap gap-2 mt-4">
 
                             <a href="Final Report ECEN4620.pdf"
-                               target="_blank"
-                               class="btn btn-primary btn-sm">
-                                View Report
+                               class="btn btn-primary"
+                               target="_blank">
+
+                                <i class="fa-solid fa-book me-2"></i>
+                                Final Report
+
                             </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4 col-lg-2">
-
-                    <div class="card h-100 shadow-sm">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">EXPO Poster</h5>
-
-                            <p class="card-text">
-                                Final capstone poster summarizing the project architecture and results.
-                            </p>
 
                             <a href="EXPO Poster.pdf"
-                               target="_blank"
-                               class="btn btn-primary btn-sm">
-                                View Poster
+                               class="btn btn-outline-primary"
+                               target="_blank">
+
+                                <i class="fa-solid fa-image me-2"></i>
+                                EXPO Poster
+
                             </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4 col-lg-2">
-
-                    <div class="card h-100 shadow-sm">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">Acceptance Test</h5>
-
-                            <p class="card-text">
-                                Final acceptance testing slides for system validation and project closure.
-                            </p>
 
                             <a href="Acceptance Test Slides-2.pdf"
-                               target="_blank"
-                               class="btn btn-primary btn-sm">
-                                View Test
+                               class="btn btn-outline-success"
+                               target="_blank">
+
+                                <i class="fa-solid fa-check-circle me-2"></i>
+                                Acceptance Test
+
                             </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4 col-lg-2">
-
-                    <div class="card h-100 shadow-sm">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">CDR Slides</h5>
-
-                            <p class="card-text">
-                                Critical Design Review slides documenting major design decisions.
-                            </p>
 
                             <a href="CDR Slides-2.pdf"
-                               target="_blank"
-                               class="btn btn-primary btn-sm">
-                                View CDR
+                               class="btn btn-outline-info"
+                               target="_blank">
+
+                                <i class="fa-solid fa-file-powerpoint me-2"></i>
+                                CDR Slides
+
                             </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-5 mt-4 mt-lg-0">
+
+                        <embed src="EXPO Poster.pdf"
+                               type="application/pdf"
+                               class="w-100 rounded shadow-sm"
+                               style="height: 520px;"
+                               alt="Final EXPO Poster">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SYSTEM ARCHITECTURE -->
+        <section class="py-5">
+
+            <h2 class="section-title mb-4">
+                System Architecture
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="card architecture-card h-100">
+
+                        <div class="card-body">
+
+                            <h4 class="mb-3">
+                                <i class="fa-solid fa-microchip me-2 text-primary"></i>
+                                Hardware Architecture
+                            </h4>
+
+                            <p>
+                                Shows the power distribution path, 1S9P Li-ion battery system,
+                                voltage rails, STM32L4 low-power controller, STM32H7 main processor,
+                                sensors, payloads, and PlutoSDR communication path.
+                            </p>
+
+                            <img src="HW Diagram.png"
+                                 class="img-fluid rounded"
+                                 alt="Hardware Architecture">
 
                         </div>
 
@@ -607,23 +306,26 @@
 
                 </div>
 
-                <div class="col-md-4 col-lg-2">
+                <div class="col-lg-6">
 
-                    <div class="card h-100 shadow-sm">
+                    <div class="card architecture-card h-100">
 
                         <div class="card-body">
 
-                            <h5 class="card-title">PDR Slides</h5>
+                            <h4 class="mb-3">
+                                <i class="fa-solid fa-diagram-project me-2 text-primary"></i>
+                                Software & Data Flow
+                            </h4>
 
-                            <p class="card-text">
-                                Preliminary Design Review presentation and early-stage architecture.
+                            <p>
+                                Shows how the STM32L4 low-power scheduler coordinates with the STM32H7
+                                processor to collect sensor data, manage storage, schedule tasks,
+                                and coordinate transmission behavior.
                             </p>
 
-                            <a href="PDR Slides.pdf"
-                               target="_blank"
-                               class="btn btn-primary btn-sm">
-                                View PDR
-                            </a>
+                            <img src="SW Diagram.png"
+                                 class="img-fluid rounded"
+                                 alt="Software Architecture">
 
                         </div>
 
@@ -631,25 +333,164 @@
 
                 </div>
 
-                <div class="col-md-4 col-lg-2">
+            </div>
 
-                    <div class="card h-100 shadow-sm">
+        </section>
+
+        <!-- RESPONSIBILITIES -->
+        <section class="py-5">
+
+            <h2 class="section-title mb-4">
+                My Role & Responsibilities
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow-sm h-100">
 
                         <div class="card-body">
 
-                            <h5 class="card-title">PoC Testing</h5>
+                            <h4>
+                                <i class="fa-solid fa-layer-group me-2 text-primary"></i>
+                                PCB Designer
+                            </h4>
 
-                            <p class="card-text">
-                                Early proof-of-concept testing and subsystem validation results.
+                            <p>
+                                Worked on the final avionics PCB integration, routing considerations,
+                                board validation, and hardware-level system integration.
                             </p>
 
-                            <a href="PoC Printout.pdf"
-                               target="_blank"
-                               class="btn btn-primary btn-sm">
-                                View PoC
-                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow-sm h-100">
+
+                        <div class="card-body">
+
+                            <h4>
+                                <i class="fa-solid fa-battery-full me-2 text-primary"></i>
+                                Power System Testing
+                            </h4>
+
+                            <p>
+                                Validated the 1S9P Li-ion battery subsystem, power distribution,
+                                voltage regulation, and runtime stability under expected mission loads.
+                            </p>
 
                         </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow-sm h-100">
+
+                        <div class="card-body">
+
+                            <h4>
+                                <i class="fa-solid fa-code me-2 text-primary"></i>
+                                STM32 Firmware & RTOS
+                            </h4>
+
+                            <p>
+                                Developed STM32H7 and STM32L4 firmware with RTOS scheduling
+                                and L4-to-H7 task coordination for sensing, storage,
+                                and communication operations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PCB -->
+        <section class="py-5">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <img src="CapstonePCB.png"
+                         class="img-fluid rounded shadow-lg project-img"
+                         alt="Final PCB">
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <h2 class="section-title mb-4">
+                        Final PCB & Embedded Integration
+                    </h2>
+
+                    <p class="fs-5">
+                        The final avionics PCB integrates embedded processing,
+                        power management, sensing systems, and communication interfaces
+                        into a compact impact-survivable embedded system.
+                    </p>
+
+                    <ul class="fs-5">
+                        <li>STM32H7 + STM32L4 coordination</li>
+                        <li>RTOS task scheduling architecture</li>
+                        <li>Sensor integration and communication buses</li>
+                        <li>Power system monitoring and validation</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL REPORT -->
+        <section class="py-5">
+
+            <div class="hero-box">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5">
+
+                        <h2 class="section-title mb-4">
+                            Finalized Engineering Report
+                        </h2>
+
+                        <p class="fs-5">
+                            The finalized report documents the complete avionics system architecture,
+                            subsystem integration, firmware development, power testing,
+                            and validation process for the Mars Hard Lander project.
+                        </p>
+
+                        <a href="Final Report ECEN4620.pdf"
+                           class="btn btn-primary btn-lg mt-3"
+                           target="_blank">
+
+                            <i class="fa-solid fa-file-pdf me-2"></i>
+                            Open Final Report
+
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-7 mt-4 mt-lg-0">
+
+                        <embed src="Final Report ECEN4620.pdf"
+                               type="application/pdf"
+                               class="w-100 rounded shadow-sm"
+                               style="height: 520px;">
 
                     </div>
 
@@ -666,14 +507,38 @@
 
         <p class="mb-2">Connect with me:</p>
 
-        <a href="https://www.linkedin.com/in/abalmutairi/"
-           class="text-info"
-           target="_blank">
+        <p class="mb-1">
 
-            <i class="fa-brands fa-linkedin"></i>
-            LinkedIn
+            <a href="https://www.linkedin.com/in/abalmutairi/"
+               class="text-info"
+               target="_blank">
 
-        </a>
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+
+            </a>
+
+            &nbsp;|&nbsp;
+
+            <a href="mailto:ab.almutairi75@gmail.com"
+               class="text-info">
+
+                <i class="fa-solid fa-envelope"></i>
+                ab.almutairi75@gmail.com
+
+            </a>
+
+            &nbsp;|&nbsp;
+
+            <a href="tel:+17204733325"
+               class="text-info">
+
+                <i class="fa-solid fa-phone"></i>
+                720-473-3325
+
+            </a>
+
+        </p>
 
     </footer>
 

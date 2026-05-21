@@ -4,94 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest FontAwesome -->
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9eef5 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #212529;
+        }
+
+        .hobby-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+            transition: 0.25s ease;
+            height: 100%;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .hobby-card img {
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: #212529;
+        }
+
+        .card-text {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .hobby-card img {
+                height: 220px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+
             <div class="container">
-                <a class="navbar-brand" href="index.html">Almutairi's</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <!-- LOGO -->
+                <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+
+                    <img src="personallogo.png"
+                         alt="Abdulrahman Logo"
+                         width="48"
+                         height="48"
+                         class="rounded-circle shadow-sm me-2">
+
+                    <span>Almutairi's</span>
+
+                </a>
+
+                <!-- MOBILE BUTTON -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
+
+                <!-- NAV LINKS -->
                 <div class="collapse navbar-collapse" id="navbarNav">
+
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="hobbies.html">Hobbies</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="capstone.html">Capstone</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                               aria-current="page"
+                               href="hobbies.html">
+
+                                Hobbies
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="capstone.html">
+                                Capstone
+                            </a>
+                        </li>
+
                     </ul>
+
+                    <!-- RIGHT SIDE LINKEDIN -->
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a></li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               href="https://www.linkedin.com/in/abalmutairi/"
+                               target="_blank">
+
+                                <i class="fa-brands fa-linkedin fa-lg"></i>
+
+                            </a>
+
+                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </nav>
     </header>
-    
-    <main class="container mt-5 pt-5">
-        <h1 class="text-center mb-4">My Hobbies</h1>
-        <div class="row text-center">
-            <!-- Hobby 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="soccerphoto.jpeg" class="card-img-top" alt="Hobby 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Soccer</h5>
-                        <p class="card-text">I used to be a soccer player in Kuwait, at the Yarmook club. </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Hobby 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="pcbphoto.jpeg" class="card-img-top" alt="Hobby 2">
-                    <div class="card-body">
-                        <h5 class="card-title"> Circuitry</h5>
-                        <p class="card-text"> Circuitry makes me enjoy my major, and as a result it became even my hobby to build new circuits and systems.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Hobby 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="runningphoto.jpeg" class="card-img-top" alt="Hobby 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Running</h5>
-                        <p class="card-text"> I enjoy running because it gives me a sense of freedom and mental clarity. It’s not just about fitness. It’s a way to challenge myself, push my limits, and experience personal growth. </p>
-                    </div>
-                </div>
-            </div>
+
+    <!-- MAIN -->
+    <main class="container mt-5 pt-5 pb-5">
+
+        <div class="text-center mb-5">
+
+            <h1 class="page-title">My Hobbies</h1>
+
+            <p class="text-muted fs-5">
+                Outside engineering and technology, these are some of the activities
+                that keep me motivated, creative, and disciplined.
+            </p>
+
         </div>
+
+        <div class="row g-4">
+
+            <!-- SOCCER -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card hobby-card">
+
+                    <img src="soccerphoto.jpeg"
+                         class="card-img-top"
+                         alt="Soccer">
+
+                    <div class="card-body text-center">
+
+                        <h4 class="card-title mb-3">
+
+                            <i class="fa-solid fa-futbol me-2 text-primary"></i>
+                            Soccer
+
+                        </h4>
+
+                        <p class="card-text">
+
+                            I used to play competitive soccer in Kuwait for
+                            Al-Yarmook Club. Soccer taught me teamwork,
+                            discipline, leadership, and consistency both
+                            on and off the field.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CIRCUITRY -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card hobby-card">
+
+                    <img src="pcbphoto.jpeg"
+                         class="card-img-top"
+                         alt="Circuitry">
+
+                    <div class="card-body text-center">
+
+                        <h4 class="card-title mb-3">
+
+                            <i class="fa-solid fa-microchip me-2 text-primary"></i>
+                            Circuitry
+
+                        </h4>
+
+                        <p class="card-text">
+
+                            Building circuits and embedded systems became
+                            more than just a major for me. I enjoy designing
+                            PCBs, experimenting with hardware, and creating
+                            systems that combine software and electronics.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RUNNING -->
+            <div class="col-lg-4 col-md-6 mx-md-auto">
+
+                <div class="card hobby-card">
+
+                    <img src="runningphoto.jpeg"
+                         class="card-img-top"
+                         alt="Running">
+
+                    <div class="card-body text-center">
+
+                        <h4 class="card-title mb-3">
+
+                            <i class="fa-solid fa-person-running me-2 text-primary"></i>
+                            Running
+
+                        </h4>
+
+                        <p class="card-text">
+
+                            Running gives me mental clarity and helps me
+                            challenge myself physically and mentally.
+                            It keeps me focused, disciplined, and motivated
+                            to continuously improve.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </main>
-    
-   <footer class="text-center bg-dark text-white py-3 mt-5">
-    <p>Connect with me:</p>
 
-    <!-- LinkedIn -->
-    <p class="mb-1">
-        <a href="https://www.linkedin.com/in/abalmutairi/" class="text-info" target="_blank">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        &nbsp;|&nbsp;
+    <!-- FOOTER -->
+    <footer class="text-center bg-dark text-white py-4 mt-auto">
 
-        <!-- Email -->
-        <a href="mailto:ab.almutairi75@gmail.com" class="text-info">
-            <i class="fa-solid fa-envelope"></i> ab.almutairi75@gmail.com
-        </a>
-        &nbsp;|&nbsp;
+        <p class="mb-2">Connect with me:</p>
 
-        <!-- Phone -->
-        <a href="tel:+17204733325" class="text-info">
-            <i class="fa-solid fa-phone"></i> 720-473-3325
-        </a>
-    </p>
-</footer>
-    
+        <p class="mb-1">
+
+            <a href="https://www.linkedin.com/in/abalmutairi/"
+               class="text-info"
+               target="_blank">
+
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+
+            </a>
+
+            &nbsp;|&nbsp;
+
+            <a href="mailto:ab.almutairi75@gmail.com"
+               class="text-info">
+
+                <i class="fa-solid fa-envelope"></i>
+                ab.almutairi75@gmail.com
+
+            </a>
+
+            &nbsp;|&nbsp;
+
+            <a href="tel:+17204733325"
+               class="text-info">
+
+                <i class="fa-solid fa-phone"></i>
+                720-473-3325
+
+            </a>
+
+        </p>
+
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
