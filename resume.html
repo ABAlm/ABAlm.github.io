@@ -4,100 +4,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest FontAwesome -->
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .resume-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .table th {
+            width: 30%;
+            background-color: #212529;
+            color: white;
+        }
+
+        .table td {
+            background-color: white;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        .resume-btn {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            border-radius: 12px;
+        }
+    </style>
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+
             <div class="container">
-                <a class="navbar-brand" href="index.html">Almutairi's</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+                    Almutairi's
+                </a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
+
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="capstone.html">Capstone</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="hobbies.html">
+                                Hobbies
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="capstone.html">
+                                Capstone
+                            </a>
+                        </li>
+
                     </ul>
+
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                        </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
     </header>
-    
+
+    <!-- MAIN -->
     <main class="container mt-5 pt-5">
-        <h1 class="text-center mb-4">My Resume</h1>
+
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>Section</th>
-                        <th>Details</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Name</strong></td>
-                        <td>Abdulrahman Almutairi</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Education</strong></td>
-                        <td>Bachelor's in Computer & Electrical Engineering</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Skills</strong></td>
-                        <td>Embedded Systems, PCB Design, Python, C++, JavaScript</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Experience</strong></td>
-                        <td>Worked on multiple projects involving robotics, automation, and software development.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Certifications</strong></td>
-                        <td>Certified in Embedded Systems and IoT Development</td>
-                    </tr>
-                </table>
+
+            <div class="col-lg-9">
+
+                <div class="resume-card">
+
+                    <h1 class="text-center fw-bold mb-4">
+                        My Resume
+                    </h1>
+
+                    <table class="table table-bordered align-middle">
+
+                        <tr>
+                            <th>Full Name</th>
+                            <td>Abdulrahman Almutairi</td>
+                        </tr>
+
+                        <tr>
+                            <th>Education</th>
+                            <td>
+                                Bachelor of Science in Electrical & Computer Engineering<br>
+                                University of Colorado Boulder
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Programming Languages</th>
+                            <td>
+                                C, C++, Python, JavaScript, SQL, HTML/CSS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Embedded Systems</th>
+                            <td>
+                                STM32, RTOS, Embedded C, Sensor Integration,
+                                UART, SPI, I2C, ADC, PWM, FreeRTOS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>PCB Design</th>
+                            <td>
+                                Altium Designer, KiCad, Multi-Layer PCB Design,
+                                Schematic Capture, PCB Routing, Power Distribution
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Software & Tools</th>
+                            <td>
+                                Git, Docker, Linux, VS Code,
+                                STM32CubeIDE, PostgreSQL, Node.js, Express.js
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Engineering Experience</th>
+                            <td>
+                                NASA JPL-sponsored Mars Hard Lander Avionics System,
+                                Embedded Systems Projects, Power System Testing,
+                                RTOS Scheduling, STM32H7/L4 Firmware Integration,
+                                Robotics & Automation
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Technical Interests</th>
+                            <td>
+                                Embedded Systems, PCB Design, Aerospace Electronics,
+                                Avionics, Firmware Development, Cybersecurity,
+                                Networking, AI Systems
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <div class="text-center mt-4">
+
+                        <p class="mb-3">
+                            Click below to view or download my full professional resume.
+                        </p>
+
+                        <a href="Abdulrahman_Almutairi_Resume_2026-2.pdf"
+                           class="btn btn-primary resume-btn"
+                           target="_blank">
+
+                            <i class="fa-solid fa-file-pdf me-2"></i>
+                            View Resume (PDF)
+
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <p>Click the link below to view or download my full resume:</p>
-                <a href="Abdulrahman_Almutairi_Resume_2026-2.pdf" class="btn btn-primary" target="_blank">
-                    <i class="fa-solid fa-file-pdf"></i> View Resume (PDF)
-                </a>
-            </div>
-        </div>
+
     </main>
-    
-   <footer class="text-center bg-dark text-white py-3 mt-5">
-    <p>Connect with me:</p>
 
-    <!-- LinkedIn -->
-    <p class="mb-1">
-        <a href="https://www.linkedin.com/in/abalmutairi/" class="text-info" target="_blank">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        &nbsp;|&nbsp;
+    <!-- FOOTER -->
+    <footer class="text-center bg-dark text-white py-4 mt-5">
 
-        <!-- Email -->
-        <a href="mailto:ab.almutairi75@gmail.com" class="text-info">
-            <i class="fa-solid fa-envelope"></i> ab.almutairi75@gmail.com
-        </a>
-        &nbsp;|&nbsp;
+        <p class="mb-2">Connect with me:</p>
 
-        <!-- Phone -->
-        <a href="tel:+17204733325" class="text-info">
-            <i class="fa-solid fa-phone"></i> 720-473-3325
-        </a>
-    </p>
-</footer>
-    
+        <p class="mb-1">
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/abalmutairi/"
+               class="text-info"
+               target="_blank">
+
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+
+            </a>
+
+            &nbsp;|&nbsp;
+
+            <!-- Email -->
+            <a href="mailto:ab.almutairi75@gmail.com"
+               class="text-info">
+
+                <i class="fa-solid fa-envelope"></i>
+                ab.almutairi75@gmail.com
+
+            </a>
+
+            &nbsp;|&nbsp;
+
+            <!-- Phone -->
+            <a href="tel:+17204733325"
+               class="text-info">
+
+                <i class="fa-solid fa-phone"></i>
+                720-473-3325
+
+            </a>
+
+        </p>
+
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
