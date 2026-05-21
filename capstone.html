@@ -195,51 +195,60 @@
         <hr>
 
         <!-- SYSTEM ARCHITECTURE -->
-        <section class="py-4">
+<section class="py-4">
 
-            <div class="row">
+    <h2 class="h4 mb-3">System Architecture</h2>
 
-                <div class="col-lg-6">
+    <p>
+        The Mars Hard Lander avionics system combines power management,
+        STM32-based processing, onboard sensing, storage, and communication
+        into a compact embedded system designed for autonomous operation.
+    </p>
 
-                    <h2 class="h4 mb-3">System Architecture</h2>
+    <p>
+        The finalized architecture is shown through the hardware and software
+        system diagrams below.
+    </p>
 
-                    <p>
-                        The Mars hard-lander avionics system combines sensing, processing,
-                        power management, onboard storage, and communication into a compact,
-                        impact-survivable embedded system.
+    <div class="row g-4 mt-3">
+
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Hardware Architecture</h5>
+                    <p class="card-text">
+                        Shows the power distribution path, 1S9P Li-ion battery system,
+                        voltage rails, STM32L4 low-power controller, STM32H7 main processor,
+                        sensors, payloads, and PlutoSDR connection.
                     </p>
 
-                    <p>
-                        The high-level architecture includes:
-                    </p>
-
-                    <ul>
-                        <li>STM32L4 low-power controller for scheduling and system coordination</li>
-                        <li>STM32H7 main processor for sensing, storage, and communication tasks</li>
-                        <li>Environmental and impact-related sensor integration</li>
-                        <li>1S9P Li-ion battery-based power subsystem</li>
-                        <li>RTOS-based task scheduling and L4-to-H7 coordination</li>
-                        <li>Custom PCB integration for the avionics system</li>
-                    </ul>
-
-                    <p class="mb-0">
-                        The electrical system was designed to support autonomous operation while
-                        maintaining reliability under constrained power, timing, and environmental conditions.
-                    </p>
-
+                    <img src="HW Diagram.png"
+                         class="img-fluid rounded"
+                         alt="Mars Hard Lander hardware architecture diagram">
                 </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-
-                    <img src="Functional_Diagram.jpeg"
-                         class="img-fluid rounded shadow-sm project-img"
-                         alt="System block diagram">
-
-                </div>
-
             </div>
+        </div>
 
-        </section>
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Software & Data Flow Architecture</h5>
+                    <p class="card-text">
+                        Shows how the STM32L4 low-power scheduler coordinates with the
+                        STM32H7 main processor to collect sensor data, store data,
+                        transmit packets through PlutoSDR, and manage system behavior.
+                    </p>
+
+                    <img src="SW Diagram.png"
+                         class="img-fluid rounded"
+                         alt="Mars Hard Lander software and data flow diagram">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
         <hr>
 
